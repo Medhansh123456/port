@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    color: rgb(255, 0, 115);
+  }
+
+  body {
+    background: url(background.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  nav {
+    /* background-color: aqua; */
+    display: flex;
+  }
+
+  nav .title {
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  nav .title #n1 {
+    color: white;
+
+  }
+
+  nav .title #n1,
+  #n2 {
+    font-weight: bold;
+    font-size: 40px;
+  }
+
+  nav .title #n2 {
+    color: rgb(255, 0, 115);
+  }
+
+  nav ul {
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+
+  }
+
+  nav ul li {
+    list-style: none;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    transition: 0.7s ease;
+    font-weight: bold;
+    font-size: 17px
+  }
+
+  nav ul li a:hover {
+    background-color: rgb(255, 0, 115);
+  }
+
+  nav .sus {
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  nav .sus button {
+    border: 1px solid transparent;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: rgb(255, 0, 115);
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  nav .sus button:hover {
+    background-color: rgb(197, 31, 106)
+  }
+
+  nav .menu i {
+    position: relative;
+    top: -100px;
+  }
+
+  #home .intro {
+    /* background-color: rgb(255, 0, 115); */
+    width: 500px;
+    position: relative;
+    top: 200px;
+
+  }
+
+  @keyframes example {
+    from {
+      left: -500px
+    }
+
+    to {
+      left: 1px
+    }
+  }
+
+  #home .intro h1 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    position: relative;
+    left: -10px;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    margin-left: 10px;
+    animation-fill-mode: forwards;
+    background-color: rgb(255, 0, 115);
+    left: 0px;
+    margin-left: 0px;
+    border-right: 1px solid transparent 25px;
+    border-radius: 0 25px 25px 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  #home .intro h2 {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    position: relative;
+    left: -10px;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    margin-left: 10px;
+    animation-fill-mode: forwards;
+    margin-top: 20px;
+    background-color: rgb(255, 0, 115);
+    left: 0px;
+    margin-left: 0px;
+    border-right: 1px solid transparent 25px;
+    border-radius: 0 25px 25px 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  #home .search {
+    position: relative;
+    top: 230px;
+    margin-left: 20px
+  }
+
+  #home .search input {
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    width: 300px;
+  }
+
+  #home .search .fa {
+    font-size: 30px;
+    margin-top: 10px;
+    position: relative;
+    top: 3px;
+
+  }
+
+  #home ion {
+    display: none;
+  }
+
+
+  @media (max-width:800px) { 
+    body {
+      background: url(none);
+      background-color: black;
+    }
+
+    #home a {
+      display: flex;
+      justify-content: center;
+      top: 200px;
+      position: relative;
+      overflow: visible
+    }
+
+    #home ion-icon {
+      font-size: 70px;
+      background-color: rgb(255, 0, 115);
+      color: black;
+      border: 1px solid transparent;
+      border-radius: 50px;
+      position: relative;
+      top: 1px;
+      outline: none;
+
+
+    }
+
+    nav .menu i {
+      position: absolute;
+      top: 10px;
+      margin-right: 0px;
+      color: white;
+      font-size: 30px;
+      right: 0px
+    }
+
+    #myLinks {
+      display: none;
+    }
+
+    #home .intro {
+      width: 300px;
+      top: 100px;
+
+    }
+
+    #home .intro h1 {
+      font-size: 20px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    #home .intro h2 {
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    nav {
+      flex-direction: column;
+    }
+
+    #home .search {
+      top: 100px;
+      position: absolute;
+    }
+
+
+    nav .title {
+      margin: auto;
+    }
+
+    nav .sus {
+      position: relative;
+      top: 0px;
+      display: flex;
+      margin-top: 30px;
+      justify-content: center;
+
+    }
+
+    #service .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+    #service .container .w1 {
+      margin-top: 70px;
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    #service .container .w2 {
+      margin-top: 70px;
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    #service .container .w3 {
+      margin-top: 70px;
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    #service .container #h1 {
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+      margin: auto;
+    }
+
+
+  }
+
+  #service {
+    margin-top: 130px
+  }
+
+  #service .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #service .container .w1 {
+    /* background-color: aqua; */
+    border: 5px solid rgb(255, 0, 115);
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+
+  }
+
+  #service .container .w2 {
+    /* background-color: aqua; */
+    border: 5px solid rgb(0, 229, 255);
+    display: flex;
+    border: 5px solid rgb(255, 0, 115);
+    border-radius: 10px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+
+  }
+
+  #service .container .w3 {
+    /* background-color: aqua; */
+    border: 5px solid rgb(0, 229, 255);
+    display: flex;
+    border: 5px solid rgb(255, 0, 115);
+    border-radius: 10px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+
+  }
+
+  #service .container .w1 img {
+    height: 200px;
+    width: 280px;
+    display: flex;
+    margin: auto;
+  }
+
+  #service .container .w2 img {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    margin: auto;
+  }
+
+  #service .container .w3 img {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    margin: auto;
+  }
+
+
+
+  #service .container .w1 h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    margin-top: 10px;
+  }
+
+  #service .container .w2 h1 {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+
+  }
+
+  #service .container .w3 h1 {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+
+  }
+
+
+  #service .container .w1 p {
+    color: #fff;
+    margin-top: 20px;
+  }
+
+  #service .container .w2 p {
+    color: #fff;
+    margin-top: 20px;
+  }
+
+  #service .container .w3 p {
+    color: #fff;
+    margin-top: 20px;
+  }
+
+  #service .container #h1 {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contact h1{
+    color: #fff;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #about h1{
+    color: #fff;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:350px;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  #about p{
+    font-family:sans-serif;
+    color: #fff;
+    margin-top:30px ;
+  }
+
+  #about img{
+    height:200px;
+    width: 400px;
+    margin-top: 50px;
+  }
+
+
+
+
+
+
+input[type=text], input[type=email], select, textarea {
+  font-size: 17px;
+  line-height: 1.23543;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  width: 100%;
+  height: 3.3em;
+  margin-bottom: 14px;
+  padding-top: 18px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #333;
+  text-align: left;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  background-clip: padding-box;
+}
+input[type=text]:hover, input[type=email]:hover, textarea:hover {
+  background-color: #eeeeee;
+}
+
+input[type=submit] {
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    font-family: SF Pro Text,SF Pro Icons,AOS Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+    background-color: #c90079;
+    border-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    padding: 13px 15px 14px;
+}
+
+input[type=submit]:hover {
+    background-color: #cd1477;
+    border-color: transparent transparent transparent transparent;
+    text-decoration: none;
+}
+
+.contact-form-container {
+  max-width: 980px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid #d6d6d6;
+}
+
+.contact-form-container h1{
+  font-weight: 100;
+  text-align: center;
+  padding-bottom: 20px;
+}
+</style>
+
+<body>
+
+
+
+
+  <nav id="#home1">
+    <div class="title">
+      <h1 id="n1">MEDHA</h1>
+      <h1 id="n2">NSH</h1>
+    </div>
+    <ul id="myLinks">
+      <li>
+        <a href="#home ,#home1">Home</a>
+        <a href="#about">About</a>
+        <a href="#service">Service</a>
+        <a href="#contact">Contacts</a>
+      </li>
+    </ul>
+    <div class="sus">
+      <a href="https://medhansh08.netlify.app/">
+        <button > VISIT OFFICIAL SITE</button>
+      </a>
+    </div>
+    <div class="menu">
+      <a href="javascript:void(0)" onclick="oc()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </nav>
+
+
+
+
+  <section id="home">
+    <div class="intro">
+      <h1>MEDHANSH BOBADE</h1>
+      <h2>I am a WEB-DEVELOPER</h2>
+    </div>
+
+    <div class="search" id="myLinks">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Search..." autocomplete="off">
+    </div>
+
+
+    <a href="#about">
+      <ion-icon name="arrow-down-outline"></ion-icon>
+    </a>
+
+  </section>
+
+
+  <section id="about">
+
+    <h1>About US</h1>
+    <div class="text">
+      <img src="about.jpg" >
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia consequuntur facere fuga error nobis, recusandae aliquid magni corporis voluptatem dolor, excepturi alias veniam, ipsam adipisci. Soluta repudiandae molestias nemo voluptate modi veritatis maxime aperiam excepturi illum molestiae, doloribus aliquam, cupiditate alias quaerat dolores vitae atque fugiat esse, praesentium nobis nihil magni! Nostrum iure blanditiis tempora exercitationem omnis, eligendi corrupti error quasi ipsam aliquid placeat praesentium cumque. Voluptate quidem reiciendis pariatur repellat, esse suscipit! Eaque ab, alias harum voluptates ad delectus. Eum reiciendis deserunt mollitia, quas fuga voluptatem possimus numquam sint?
+      </p>
+    </div>
+
+  </section>
+
+  <section id="service">
+    <div class="container">
+
+      <h1 id="h1">OUR SERVICE</h1>
+
+      <div class="w1">
+        <img src="w1.png">
+        <h1>Designing</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat enim explicabo dolorum porro temporibus
+          pariatur nesciunt neque quod, aperiam ab.</p>
+      </div>
+      <div class="w2">
+        <img src="doding.jpg">
+        <h1>Coding</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat enim explicabo dolorum porro temporibus
+          pariatur nesciunt neque quod, aperiam ab.</p>
+      </div>
+      <div class="w3">
+        <img src="w3.jpg">
+        <h1>Final Look</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat enim explicabo dolorum porro temporibus
+          pariatur nesciunt neque quod, aperiam ab.</p>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <div class="contact-form-container" style="background-color:black; border:none">
+      <h1 >Contact Us</h1>
+      <form>
+        <input type="text" id="name" name="name" placeholder="Your Name">
+
+        <input type="email" placeholder="Email Address" size="30" required></label>
+
+        <textarea id="subject" name="subject" placeholder="Message" style="height:200px" required></textarea>
+
+        <input type="submit" value="Send">
+      </form>
+    </div>
+  </section>
+
+
+
+  <footer class="text-gray-400 bg-black body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <svg xmlns=#" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-purple-900 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">Medhansh</span>
+      </a>
+      <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">WebDeveloper-
+        <a class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">medhanshbobade@gmail.com</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-400">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-400">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    function oc() {
+      var x = window.matchMedia("(max-width:800px)")
+      var myLinks = document.getElementById('myLinks');
+      if (x.matches && myLinks.style.display === 'block') {
+        myLinks.style.display = 'none';
+      }
+      else {
+        myLinks.style.display = 'block';
+      }
+    }
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
